@@ -46,7 +46,15 @@ use naduvko\behaviors\UUIDBehavior;
  */
 class <?= $className ?> extends <?= ($isTree) ? '\kartik\tree\models\Tree' . "\n" : '\\' . ltrim($generator->baseModelClass, '\\') . "\n" ?>
 {
-<?= (!$isTree) ? " //   use \\naduvko\\relation\\RelationTrait;\n" : "" ?>
+
+    
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return '<?= $generator->generateTableName($tableName) ?>';
+    }
 
 <?php if($generator->deletedBy): ?>
     private $_rt_softdelete;
@@ -68,18 +76,6 @@ class <?= $className ?> extends <?= ($isTree) ? '\kartik\tree\models\Tree' . "\n
         ];
     }
 <?php endif; ?>
-<?php if (!$isTree): ?>
-
-    /**
-    * This function helps \naduvko\relation\RelationTrait runs faster
-    * @return array relation names of this model
-    */
-    public function relationNames()
-    {
-        return [<?= "\n            '" . implode("',\n            '", array_keys($relations)) . "'\n        " ?>];
-    }
-
-<?php endif; ?>
     /**
      * @inheritdoc
      */
@@ -88,13 +84,6 @@ class <?= $className ?> extends <?= ($isTree) ? '\kartik\tree\models\Tree' . "\n
         return [<?= "\n            " . implode(",\n            ", $rules) . "\n        " ?>];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '<?= $generator->generateTableName($tableName) ?>';
-    }
 <?php if ($generator->db !== 'db'): ?>
 
     /**
