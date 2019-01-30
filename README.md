@@ -7,7 +7,7 @@ Do not use it on production!
 
 [![Total Downloads](https://poser.pugx.org/naduvko/yii2-enhanced-gii/downloads)](https://packagist.org/packages/naduvko/yii2-enhanced-gii)
 [![Latest Stable Version](https://poser.pugx.org/naduvko/yii2-enhanced-gii/v/stable)](https://packagist.org/packages/naduvko/yii2-enhanced-gii)
-[![License](https://poser.pugx.org/naduvko/yii2-enhanced-gii/license)](https://packagist.org/packages/naduvko/yii2-sortable-grid-view-widget)
+[![License](https://poser.pugx.org/naduvko/yii2-enhanced-gii/license)](https://packagist.org/packages/naduvko/yii2-enhanced-gii)
 
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
 
