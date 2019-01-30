@@ -66,7 +66,7 @@ class Generator extends \naduvko\enhancedgii\BaseGenerator
      */
     public function getName()
     {
-        return 'I/O Generator (CRUD)';
+        return 'Naduvko Generator (CRUD)';
     }
 
     /**

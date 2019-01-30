@@ -67,7 +67,7 @@ class Generator extends BaseGenerator {
      * @inheritdoc
      */
     public function getName() {
-        return 'I/O Generator (Model)';
+        return 'Naduvko Generator (Model)';
     }
 
     /**
