@@ -11,7 +11,6 @@ Do not use it on production!
 
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
 
-https://www.linkedin.com/in/yohanes-candrajaya-b68394102/
 
 ## Installation
 
