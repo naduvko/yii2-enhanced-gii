@@ -4,8 +4,7 @@
     "keywords": ["relation", "gii", "yii2", "yii", "enhanced"],
     "license": "BSD-3-Clause",
     "type": "yii2-extension",
-    "authors": [
-        {
+    "authors": [{
             "name": "Yohanes Candrajaya",
             "email": "moo.tensai@gmail.com"
         },
@@ -28,10 +27,10 @@
     },
     "autoload": {
         "psr-4": {
-            "mootensai\\enhancedgii\\": ""
+            "naduvko\\enhancedgii\\": ""
         }
     },
     "extra": {
-        "bootstrap": "mootensai\\enhancedgii\\Bootstrap"
+        "bootstrap": "naduvko\\enhancedgii\\Bootstrap"
     }
 }

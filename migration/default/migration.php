@@ -4,7 +4,7 @@
  */
 
 /* @var $this yii\web\View */
-/* @var $generator mootensai\enhancedgii\migration\Generator */
+/* @var $generator naduvko\enhancedgii\migration\Generator */
 /* @var $migrationName string migration name */
 
 echo "<?php\n";

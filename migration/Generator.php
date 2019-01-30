@@ -1,6 +1,6 @@
 <?php
 
-namespace mootensai\enhancedgii\migration;
+namespace naduvko\enhancedgii\migration;
 
 use Yii;
 use yii\db\Connection;

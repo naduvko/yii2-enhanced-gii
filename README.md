@@ -1,19 +1,12 @@
 # yii2-enhanced-gii
-Yii2 Gii (generator) with Relation
+Yii2 Gii (generator) with Relation 
+Fork of mootensai/yii2-enhanced-gii
 
-[![Latest Stable Version](https://poser.pugx.org/mootensai/yii2-enhanced-gii/v/stable)](https://packagist.org/packages/mootensai/yii2-enhanced-gii)
-[![License](https://poser.pugx.org/mootensai/yii2-enhanced-gii/license)](https://packagist.org/packages/mootensai/yii2-enhanced-gii)
-[![Total Downloads](https://poser.pugx.org/mootensai/yii2-enhanced-gii/downloads)](https://packagist.org/packages/mootensai/yii2-enhanced-gii)
-[![Monthly Downloads](https://poser.pugx.org/mootensai/yii2-enhanced-gii/d/monthly)](https://packagist.org/packages/mootensai/yii2-enhanced-gii)
-[![Daily Downloads](https://poser.pugx.org/mootensai/yii2-enhanced-gii/d/daily)](https://packagist.org/packages/mootensai/yii2-enhanced-gii)
-[![Join the chat at https://gitter.im/mootensai/yii2-enhanced-gii](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mootensai/yii2-enhanced-gii?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Total Downloads](https://poser.pugx.org/naduvko/yii2-enhanced-gii/downloads)](https://packagist.org/packages/naduvko/yii2-enhanced-gii)
+[![Latest Stable Version](https://poser.pugx.org/naduvko/yii2-enhanced-gii/v/stable)](https://packagist.org/packages/naduvko/yii2-enhanced-gii)
+[![License](https://poser.pugx.org/naduvko/yii2-enhanced-gii/license)](https://packagist.org/packages/naduvko/yii2-sortable-grid-view-widget)
+
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
-## Support
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.svg)](https://gratipay.com/mootensai/)
-
-https://www.paypal.me/yohanesc
-
-Endorse me on LinkedIn
 
 https://www.linkedin.com/in/yohanes-candrajaya-b68394102/
 
@@ -24,7 +17,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ composer require mootensai/yii2-enhanced-gii:dev-master
+$ composer require naduvko/yii2-enhanced-gii:dev-master
 $ composer require kartik-v/yii2-mpdf:dev-master # if you want to use pdf exporter 
 $ composer require kartik-v/yii2-tree-manager:dev-master # if you want to use tree/nested relation table
 ```
@@ -32,7 +25,7 @@ $ composer require kartik-v/yii2-tree-manager:dev-master # if you want to use tr
 or add
 
 ```
-"mootensai/yii2-enhanced-gii": "dev-master",
+"naduvko/yii2-enhanced-gii": "dev-master",
 "kartik-v/yii2-mpdf": "dev-master",
 "kartik-v/yii2-tree-manager": "dev-master"
 ```
@@ -141,3 +134,4 @@ I'm open for any improvement
 2. kartik-v (https://github.com/kartik-v) for most of widgets
 3. schmunk42 (https://github.com/schmunk42) for bootstrap & model base & extension
 4. mdmunir (https://github.com/mdmunir) for JsBlock & Migration Generator (from https://github.com/deesoft/yii2-gii)
+4. mootensai (https://github.com/mootensai) 

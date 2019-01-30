@@ -4,7 +4,7 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
-/* @var $generator \mootensai\enhancedgii\crud\Generator */
+/* @var $generator \naduvko\enhancedgii\crud\Generator */
 /* @var $relations array */
 /* @var $relName string */
 
@@ -30,7 +30,7 @@ $modelClass = StringHelper::basename($generator->modelClass);
 //foreach ($relations as $name => $rel) {
 //    $relID = Inflector::camel2id($rel[1]);
 //    if ($rel[2] && isset($rel[3]) && !in_array($name, $generator->skippedRelations)) {
-//        echo "\mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, \n"
+//        echo "\naduvko\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, \n"
 //                . "    'viewParams' => [\n"
 //                . "        'class' => '$rel[1]', \n"
 //                . "        'relID' => '$relID', \n"

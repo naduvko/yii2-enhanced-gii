@@ -6,9 +6,9 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace mootensai\enhancedgii\model;
+namespace naduvko\enhancedgii\model;
 
-use mootensai\enhancedgii\BaseGenerator;
+use naduvko\enhancedgii\BaseGenerator;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\db\Schema;
@@ -495,7 +495,7 @@ class Generator extends BaseGenerator {
             }
             if (!empty($this->optimisticLock)) {
                 $rules[] = "[['" . $this->optimisticLock . "'], 'default', 'value' => '0']";
-                $rules[] = "[['" . $this->optimisticLock . "'], 'mootensai\\components\\OptimisticLockValidator']";
+                $rules[] = "[['" . $this->optimisticLock . "'], 'naduvko\\components\\OptimisticLockValidator']";
             }
         } catch (NotSupportedException $e) {
             // doesn't support unique indexes information...do nothing

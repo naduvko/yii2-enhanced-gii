@@ -1908,7 +1908,7 @@
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "mootensai\\components\\": ""
+                    "naduvko\\components\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1946,7 +1946,7 @@
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "mootensai\\components\\": ""
+                    "naduvko\\components\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1995,7 +1995,7 @@
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "mootensai\\relation\\": ""
+                    "naduvko\\relation\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2049,7 +2049,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "mootensai\\behaviors\\": ""
+                    "naduvko\\behaviors\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
