@@ -26,7 +26,9 @@ $modelClass = StringHelper::basename($generator->modelClass);
 
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-form">
 
-    <?= "<?php " ?>$form = ActiveForm::begin(); ?>
+    <?= "<?php " ?>$form = ActiveForm::begin([
+        'layout' => 'horizontal',
+    ]); ?>
 
     <?= "<?= " ?>$form->errorSummary($model); ?>
 

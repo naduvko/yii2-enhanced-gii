@@ -836,10 +836,18 @@ if (array_key_exists($attribute, $fk) && $attribute) {
         'type' => \\kartik\\datecontrol\\DateControl::FORMAT_DATE,
         'saveFormat' => 'php:Y-m-d',
         'ajaxConversion' => true,
+        'widgetOptions' =>[
+            'pluginOptions'=> [
+                'todayHighlight' =>true,
+                'weekStart'=>1,
+                'todayHighlight' => true,
+                'autoclose' => true,
+                'clearBtn'=>true,
+                'zIndexOffset'=>'1200',
+             ],
         'options' => [
             'pluginOptions' => [
-                'placeholder' => " . $this->generateString('Choose ' . $placeholder) . ",
-                'autoclose' => true
+                'placeholder' =>  Yii::t('app', 'Choose date'),
             ]
         ],
     ]);";
@@ -848,10 +856,18 @@ if (array_key_exists($attribute, $fk) && $attribute) {
         'type' => \\kartik\\datecontrol\\DateControl::FORMAT_TIME,
         'saveFormat' => 'php:H:i:s',
         'ajaxConversion' => true,
+        'widgetOptions' =>[
+            'pluginOptions'=> [
+                'todayHighlight' =>true,
+                'weekStart'=>1,
+                'todayHighlight' => true,
+                'autoclose' => true,
+                'clearBtn'=>true,
+                'zIndexOffset'=>'1200',
+             ],
         'options' => [
             'pluginOptions' => [
-                'placeholder' => " . $this->generateString('Choose ' . $placeholder) . ",
-                'autoclose' => true
+                'placeholder' =>  Yii::t('app', 'Choose time'),
             ]
         ]
     ]);";
@@ -860,10 +876,18 @@ if (array_key_exists($attribute, $fk) && $attribute) {
         'type' => \\kartik\\datecontrol\\DateControl::FORMAT_DATETIME,
         'saveFormat' => 'php:Y-m-d H:i:s',
         'ajaxConversion' => true,
+        'widgetOptions' =>[
+            'pluginOptions'=> [
+                'todayHighlight' =>true,
+                'weekStart'=>1,
+                'todayHighlight' => true,
+                'autoclose' => true,
+                'clearBtn'=>true,
+                'zIndexOffset'=>'1200',
+             ],
         'options' => [
             'pluginOptions' => [
-                'placeholder' => " . $this->generateString('Choose ' . $placeholder) . ",
-                'autoclose' => true,
+                'placeholder' =>  Yii::t('app', 'Choose date'),
             ]
         ],
     ]);";
@@ -1007,6 +1031,7 @@ if (array_key_exists($attribute, $fk) && $attribute) {
                 case Schema::TYPE_SMALLINT:
                 case Schema::TYPE_INTEGER:
                 case Schema::TYPE_BIGINT:
+                case Schema::TYPE_TINYINT:
                     $types['integer'][] = $column->name;
                     break;
                 case Schema::TYPE_BOOLEAN:
