@@ -360,13 +360,13 @@ class Generator extends \naduvko\enhancedgii\BaseGenerator
                 if(!$isTree && ($file === 'indexNested.php' || $file === '_formNested.php')){
                     continue;
                 }
-                if (is_file($templatePath . '/' . $file) && pathinfo($file, PATHINFO_EXTENSION) === 'php') {
-                    $fileName = ($isTree) ? str_replace('Nested','',$file) : $file;
-                    $files[] = new CodeFile("$viewPath/$fileName", $this->render("views/$file", [
-                        'relations' => isset($relations[$tableName]) ? $relations[$tableName] : [],
-                        'isTree' => $isTree
-                    ]));
-                }
+                // if (is_file($templatePath . '/' . $file) && pathinfo($file, PATHINFO_EXTENSION) === 'php') {
+                //     $fileName = ($isTree) ? str_replace('Nested','',$file) : $file;
+                //     $files[] = new CodeFile("$viewPath/$fileName", $this->render("views/$file", [
+                //         'relations' => isset($relations[$tableName]) ? $relations[$tableName] : [],
+                //         'isTree' => $isTree
+                //     ]));
+                // }
             }
             if ($this->expandable) {
                 $files[] = new CodeFile("$viewPath/_expand.php", $this->render("views/_expand.php", [

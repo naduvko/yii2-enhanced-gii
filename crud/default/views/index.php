@@ -25,11 +25,7 @@ use <?= $generator->indexWidgetType === 'grid' ? "kartik\\grid\\GridView;" : "yi
 
 $this->title = <?= ($generator->pluralize) ? $generator->generateString(Inflector::pluralize(Inflector::camel2words($baseModelClass))) : $generator->generateString(Inflector::camel2words($baseModelClass)) ?>;
 $this->params['breadcrumbs'][] = $this->title;
-$search = "$('.search-button').click(function(){
-	$('.search-form').toggle(1000);
-	return false;
-});";
-$this->registerJs($search);
+
 ?>
 <div class="<?= Inflector::camel2id($baseModelClass) ?>-index">
 
@@ -44,11 +40,6 @@ $this->registerJs($search);
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Advance Search')?>, '#', ['class' => 'btn btn-info search-button']) ?>
 <?php endif; ?>
     </p>
-<?php if (!empty($generator->searchModelClass)): ?>
-    <div class="search-form" style="display:none">
-        <?= "<?= " ?> $this->render('_search', ['model' => $searchModel]); ?>
-    </div>
-    <?php endif; ?>
 <?php 
 if ($generator->indexWidgetType === 'grid'): 
 ?>
