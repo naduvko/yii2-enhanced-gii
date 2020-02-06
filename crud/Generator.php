@@ -841,15 +841,14 @@ if (array_key_exists($attribute, $fk) && $attribute) {
                 'todayHighlight' =>true,
                 'weekStart'=>1,
                 'todayHighlight' => true,
+                'todayBtn'=>'linked',
                 'autoclose' => true,
                 'clearBtn'=>true,
                 'zIndexOffset'=>'1200',
              ],
         'options' => [
-            'pluginOptions' => [
-                'placeholder' =>  Yii::t('app', 'Choose date'),
-            ]
-        ],
+            'placeholder' =>  Yii::t('app', 'Choose date'),
+        ],]
     ]);";
         } elseif ($column->dbType === 'time') {
             return "\$form->field($model, '$attribute')->widget(\\kartik\\datecontrol\\DateControl::className(), [
@@ -861,15 +860,14 @@ if (array_key_exists($attribute, $fk) && $attribute) {
                 'todayHighlight' =>true,
                 'weekStart'=>1,
                 'todayHighlight' => true,
+                'todayBtn'=>'linked',
                 'autoclose' => true,
                 'clearBtn'=>true,
                 'zIndexOffset'=>'1200',
              ],
         'options' => [
-            'pluginOptions' => [
-                'placeholder' =>  Yii::t('app', 'Choose time'),
-            ]
-        ]
+            'placeholder' =>  Yii::t('app', 'Choose time'),
+        ]]
     ]);";
         } elseif ($column->dbType === 'datetime') {
             return "\$form->field($model, '$attribute')->widget(\\kartik\\datecontrol\\DateControl::classname(), [
@@ -881,15 +879,14 @@ if (array_key_exists($attribute, $fk) && $attribute) {
                 'todayHighlight' =>true,
                 'weekStart'=>1,
                 'todayHighlight' => true,
+                'todayBtn'=>'linked',
                 'autoclose' => true,
                 'clearBtn'=>true,
                 'zIndexOffset'=>'1200',
              ],
         'options' => [
-            'pluginOptions' => [
-                'placeholder' =>  Yii::t('app', 'Choose date'),
-            ]
-        ],
+            'placeholder' =>  Yii::t('app', 'Choose date'),
+        ],]
     ]);";
         } elseif (array_key_exists($column->name, $fk)) {
             $rel = $fk[$column->name];
