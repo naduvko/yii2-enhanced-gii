@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = ['label' => <?= ($generator->pluralize) ? $gene
 $this->params['breadcrumbs'][] = ['label' => $model-><?= $generator->getNameAttribute() ?>, 'url' => ['view', <?= $urlParams ?>]];
 $this->params['breadcrumbs'][] = <?= $generator->generateString('Update') ?>;
 ?>
-<div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update">
+<div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update card">
 
     <h5 class="card-header"><?= "<?= " ?>Html::encode($this->title) ?></h1>
     <div class="card-body">

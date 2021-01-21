@@ -29,17 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="<?= Inflector::camel2id($baseModelClass) ?>-index">
 
-    <h1><?= "<?= " ?>Html::encode($this->title) ?></h1>
-<?php if (!empty($generator->searchModelClass)): ?>
-<?= "    <?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
-<?php endif; ?>
 
-    <p>
-        <?= "<?= " ?>Html::a(<?= $generator->generateString('Create ' . Inflector::camel2words($baseModelClass)) ?>, ['create'], ['class' => 'btn btn-success']) ?>
-<?php if (!empty($generator->searchModelClass)): ?>
-        <?= "<?= " ?>Html::a(<?= $generator->generateString('Advance Search')?>, '#', ['class' => 'btn btn-info search-button']) ?>
-<?php endif; ?>
-    </p>
 <?php 
 if ($generator->indexWidgetType === 'grid'): 
 ?>
@@ -87,7 +77,7 @@ if ($generator->indexWidgetType === 'grid'):
             'template' => '{save-as-new} {view} {update} {delete}',
             'buttons' => [
                 'save-as-new' => function ($url) {
-                    return Html::a('<span class="glyphicon glyphicon-copy"></span>', $url, ['title' => 'Save As New']);
+                    return Html::a('<i class="fas fa-copy"></i>', $url, ['title' => 'Save As New']);
                 },
             ],
 <?php endif; ?>
@@ -103,15 +93,16 @@ if ($generator->indexWidgetType === 'grid'):
         'pjax' => true,
         'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-<?= Inflector::camel2id(StringHelper::basename($generator->modelClass))?>']],
         'panel' => [
+        'before' => Html::a(<?= $generator->generateString('Create ' . Inflector::camel2words($baseModelClass)) ?>, ['create'], ['class' => 'btn btn-success', 'data-pjax' => 0 ]) ?>
             'type' => GridView::TYPE_PRIMARY,
-            'heading' => '<span class="glyphicon glyphicon-book"></span>  ' . Html::encode($this->title),
+            'heading' =>  Html::encode($this->title),
         ],
 <?php if(!$generator->pdf) : ?>
         'export' => false,
 <?php endif; ?>
         // your toolbar can include the additional full export menu
         'toolbar' => [
-            '{export}',
+            //'{export}',
             ExportMenu::widget([
                 'dataProvider' => $dataProvider,
                 'columns' => $gridColumn,

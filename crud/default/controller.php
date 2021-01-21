@@ -46,7 +46,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     {
         return [
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => VerbFilter::class,
                 'actions' => [
                     'delete' => ['post'],
                 ],
@@ -66,7 +66,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     }
 ?>
             'access' => [
-                'class' => \yii\filters\AccessControl::className(),
+                'class' => \yii\filters\AccessControl::class,
                 'rules' => [
                     [
                         'allow' => true,
@@ -287,28 +287,4 @@ if (count($pks) === 1) {
             throw new NotFoundHttpException(<?= $generator->generateString('The requested page does not exist.')?>);
         }
     }
-<?php foreach ($relations as $name => $rel): ?>
-<?php if ($rel[2] && isset($rel[3]) && !in_array($name, $generator->skippedRelations)): ?>
-    
-    /**
-    * Action to load a tabular form grid
-    * for <?= $rel[1] . "\n" ?>
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
-    public function actionAdd<?= $rel[1] ?>()
-    {
-        if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('<?= $rel[1] ?>');
-            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
-                $row[] = [];
-            return $this->renderAjax('_form<?= $rel[1] ?>', ['row' => $row]);
-        } else {
-            throw new NotFoundHttpException(<?= $generator->generateString('The requested page does not exist.')?>);
-        }
-    }
-<?php endif; ?>
-<?php endforeach; ?>
 }
