@@ -93,7 +93,7 @@ if ($generator->indexWidgetType === 'grid'):
         'pjax' => true,
         'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-<?= Inflector::camel2id(StringHelper::basename($generator->modelClass))?>']],
         'panel' => [
-        'before' => Html::a(<?= $generator->generateString('Create ' . Inflector::camel2words($baseModelClass)) ?>, ['create'], ['class' => 'btn btn-success', 'data-pjax' => 0 ]) ?>
+        'before' => Html::a(<?= $generator->generateString('Create ' . Inflector::camel2words($baseModelClass)) ?>, ['create'], ['class' => 'btn btn-success', 'data-pjax' => 0 ]),
             'type' => GridView::TYPE_PRIMARY,
             'heading' =>  Html::encode($this->title),
         ],
